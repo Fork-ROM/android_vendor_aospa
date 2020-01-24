@@ -20,6 +20,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GoogleCameraGo
 
+# Charger mode images
+ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+endif
+
 # curl
 PRODUCT_PACKAGES += \
     curl
