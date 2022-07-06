@@ -214,7 +214,7 @@ elif [ "${KEY_MAPPINGS}" ]; then
     ota_from_target_files -k $KEY_MAPPINGS/releasekey \
         --block ${INCREMENTAL} \
         aospa-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip \
-        aospa-$AOSPA_VERSION.zip
+        "$OUT"/aospa-$AOSPA_VERSION.zip
 
     checkExit
 
