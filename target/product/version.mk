@@ -38,14 +38,14 @@ AOSPA_MINOR_VERSION := 1
 # Release: Final Product | No Tagging
 ifdef AOSPA_BUILDTYPE
   ifeq ($(AOSPA_BUILDTYPE), ALPHA)
-      AOSPA_BUILD_VARIANT := alpha
+      AOSPA_BUILD_VARIANT := ALPHA
   else ifeq ($(AOSPA_BUILDTYPE), BETA)
-      AOSPA_BUILD_VARIANT := beta
+      AOSPA_BUILD_VARIANT := BETA
   else ifeq ($(AOSPA_BUILDTYPE), RELEASE)
-      AOSPA_BUILD_VARIANT := release
+      AOSPA_BUILD_VARIANT := RELEASE
   endif
 else
-  AOSPA_BUILD_VARIANT := unofficial
+  AOSPA_BUILD_VARIANT := UNOFFICIAL
 endif
 
 # Build Date
