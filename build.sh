@@ -206,15 +206,15 @@ elif [ "${KEY_MAPPINGS}" ]; then
     echo -e "${CLR_BLD_BLU}Signing target files apks${CLR_RST}"
     sign_target_files_apks -o -d $KEY_MAPPINGS \
         "$OUT"/obj/PACKAGING/target_files_intermediates/aospa_$DEVICE-target_files-$FILE_NAME_TAG.zip \
-        aospa-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip
+        signed-target_files.zip
 
     checkExit
 
     echo -e "${CLR_BLD_BLU}Generating signed install package${CLR_RST}"
     ota_from_target_files -k $KEY_MAPPINGS/releasekey \
         --block ${INCREMENTAL} \
-        aospa-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip \
-        "$OUT"/aospa-$AOSPA_VERSION.zip
+        signed-target_files.zip \
+        AOSPA-$AOSPA_VERSION.zip
 
     checkExit
 
@@ -226,16 +226,16 @@ elif [ "${KEY_MAPPINGS}" ]; then
         fi
         ota_from_target_files -k $KEY_MAPPINGS/releasekey \
             --block --incremental_from $DELTA_TARGET_FILES \
-            aospa-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip \
-            aospa-$AOSPA_VERSION-delta.zip
+            Signed-target_files.zip \
+            AOSPA-$AOSPA_VERSION-delta.zip
         checkExit
     fi
 
     if [ "$FLAG_IMG_ZIP" = 'y' ]; then
         echo -e "${CLR_BLD_BLU}Generating signed fastboot package${CLR_RST}"
         img_from_target_files \
-            aospa-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip \
-            aospa-$AOSPA_VERSION-image.zip
+            signed-target_files.zip \
+            AOSPA-$AOSPA_VERSION-image.zip
         checkExit
     fi
 # Build rom package
@@ -247,14 +247,14 @@ elif [ "$FLAG_IMG_ZIP" = 'y' ]; then
     echo -e "${CLR_BLD_BLU}Generating install package${CLR_RST}"
     ota_from_target_files \
         "$OUT"/obj/PACKAGING/target_files_intermediates/aospa_$DEVICE-target_files-$FILE_NAME_TAG.zip \
-        aospa-$AOSPA_VERSION.zip
+        AOSPA-$AOSPA_VERSION.zip
 
     checkExit
 
     echo -e "${CLR_BLD_BLU}Generating fastboot package${CLR_RST}"
     img_from_target_files \
         "$OUT"/obj/PACKAGING/target_files_intermediates/aospa_$DEVICE-target_files-$FILE_NAME_TAG.zip \
-        aospa-$AOSPA_VERSION-image.zip
+        AOSPA-$AOSPA_VERSION-image.zip
 
     checkExit
 
