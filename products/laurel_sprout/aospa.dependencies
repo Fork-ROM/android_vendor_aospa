@@ -1,0 +1,40 @@
+[
+    {
+        "remote":       "github",
+        "repository":   "ArrowOS/android_hardware_qcom_bootctrl",
+        "target_path":  "hardware/qcom-caf/bootctrl",
+        "revision":     "arrow-13.0-caf"
+    },
+    {
+        "remote":       "aospa",
+        "repository":   "AOSPA/android_hardware_qcom_display",
+        "target_path":  "hardware/qcom/display",
+        "revision":     "topaz-855"
+    },
+    {
+        "remote":       "aospa",
+        "repository":   "AOSPA/android_hardware_qcom_media",
+        "target_path":  "hardware/qcom/media",
+        "revision":     "topaz-855"
+    },
+    {
+        "remote":       "aospa",
+        "repository":   "aospa-pasco/hardware_qcom_gps",
+        "target_path":  "hardware/qcom/gps",
+        "revision":     "topaz-nicobar"
+    },
+    {
+        "remote":       "github",
+        "repository":   "anirudhkosgi/vendor_support",
+        "target_path":  "vendor/support",
+        "revision":     "sapphire"
+    },
+    {
+        "remote":       "blobs-gitlab",
+        "repository":   "android_prebuilts_clang-standalone",
+        "target_path":  "prebuilts/clang-standalone",
+        "revision":     "15",
+        "clone-depth":  "1"
+    }
+]
+

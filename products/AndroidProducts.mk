@@ -22,6 +22,7 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/bluejay/aospa_bluejay.mk \
     $(LOCAL_DIR)/cheetah/aospa_cheetah.mk \
     $(LOCAL_DIR)/lmi/aospa_lmi.mk \
+    $(LOCAL_DIR)/laurel_sprout/aospa_laurel_sprout.mk \
     $(LOCAL_DIR)/miatoll/aospa_miatoll.mk \
     $(LOCAL_DIR)/mini5g/aospa_mini5g.mk \
     $(LOCAL_DIR)/oneplus9/aospa_oneplus9.mk \
@@ -44,6 +45,7 @@ COMMON_LUNCH_CHOICES += \
     aospa_bluejay-userdebug \
     aospa_cheetah-userdebug \
     aospa_lmi-userdebug \
+    aospa_laurel_sprout-userdebug \
     aospa_miatoll-userdebug \
     aospa_mini5g-userdebug \
     aospa_oneplus9-userdebug \
