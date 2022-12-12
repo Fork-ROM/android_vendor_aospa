@@ -12,6 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# A/B OTA Optimization
+ifneq ($(AB_OTA_PARTITIONS),)
+PRODUCT_PACKAGES += \
+    checkpoint_gc \
+    otapreopt_script
+endif
+
 # AOSPA Versioning.
 $(call inherit-product, vendor/aospa/target/product/version.mk)
 
@@ -21,8 +28,12 @@ $(call inherit-product, vendor/aospa/bootanimation/bootanimation.mk)
 # Don't dexpreopt prebuilts. (For GMS).
 DONT_DEXPREOPT_PREBUILTS := true
 
-# Filesystem
-TARGET_FS_CONFIG_GEN += vendor/aospa/target/config/config.fs
+# Fonts
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/aospa/prebuilts/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    vendor/aospa/target/config/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+
+$(call inherit-product, external/google-fonts/lato/fonts.mk)
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
@@ -62,9 +73,8 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    vendor/aospa/target/config/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     vendor/aospa/target/config/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
-    vendor/aospa/target/config/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+    vendor/aospa/target/config/permissions/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
 
 # Sensitive phone numbers and APN configurations
 PRODUCT_COPY_FILES += \

@@ -44,6 +44,9 @@ ifneq ($(filter RELEASE BETA,$(AOSPA_BUILDTYPE)),)
 PRODUCT_PACKAGES += ParanoidHub
 endif
 
+PRODUCT_PACKAGES += \
+    init.aospa-hub.rc
+
 # Theme Picker
 PRODUCT_PACKAGES += \
     ThemePicker
@@ -66,6 +69,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_vendor \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
+
+# Telephony - AOSP
+PRODUCT_PACKAGES += \
+    Stk
 
 # Telephony - CLO
 PRODUCT_PACKAGES += \

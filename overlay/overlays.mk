@@ -19,4 +19,10 @@ PRODUCT_PACKAGES += \
     AOSPASettingsOverlay \
     AOSPASettingsProviderOverlay \
     AOSPASystemUIOverlay \
+    FontGoogleSansLatoOverlay \
+    FontHarmonySansOverlay \
+    FontInterOverlay \
+    FontManropeOverlay \
+    FontRobotoOverlay \
+    FontUrbanistOverlay \
     ParanoidLauncherOverlay
