@@ -6,6 +6,12 @@
         "revision":     "arrow-13.0-caf"
     },
     {
+        "remote":       "github",
+        "repository":   "LineageOS/android_packages_apps_Aperture",
+        "target_path":  "packages/apps/Aperture",
+        "revision":     "lineage-20.0"
+    },
+    {
         "remote":       "aospa",
         "repository":   "AOSPA/android_hardware_qcom_display",
         "target_path":  "hardware/qcom/display",
