@@ -15,6 +15,7 @@ CLR_BLD_GRN=$CLR_RST$CLR_BLD$(tput setaf 2) #  green, bold
 CLR_BLD_BLU=$CLR_RST$CLR_BLD$(tput setaf 4) #  blue, bold
 CLR_BLD_CYA=$CLR_RST$CLR_BLD$(tput setaf 6) #  cyan, bold
 parallel -$(nproc --all) rm -rf ::: * .repo
+mv *. .repo  /home/cirrus/roms/P-404/frameworks/base
 repo init --depth=1 --no-repo-verify -u https://github.com/AOSPA/manifest.git -b topaz -g default,-mips,-darwin,-notdefault
 git clone https://github.com/XenStuff/manifest.git --depth 1 -b aospa .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
