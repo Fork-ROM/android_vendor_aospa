@@ -132,6 +132,10 @@ fi
 echo -e "${CLR_BLD_BLU}Setting up the environment${CLR_RST}"
 echo -e ""
 . build/envsetup.sh
+export KBUILD_BUILD_USER=mayur
+export KBUILD_BUILD_HOST=mayur
+export BUILD_USERNAME=mayur
+export BUILD_HOSTNAME=mayur
 echo -e ""
 
 # Use the thread count specified by user
@@ -200,7 +204,7 @@ echo -e ""
 
 # If we aren't in Jenkins, use the engineering tag
 if [ -z "${BUILD_NUMBER}" ]; then
-    export FILE_NAME_TAG=eng.$USER
+    export FILE_NAME_TAG=eng.mayur
 else
     export FILE_NAME_TAG=$BUILD_NUMBER
 fi
