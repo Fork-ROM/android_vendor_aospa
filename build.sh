@@ -20,7 +20,6 @@ repo init --depth=1 --no-repo-verify -u https://github.com/AOSPA/manifest.git -b
 git clone https://github.com/XenStuff/manifest.git --depth 1 -b aospa .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-repo init
 # Set defaults
 BUILD_TYPE="userdebug"
 
@@ -306,4 +305,3 @@ echo -e ""
 
 exit 0
 rm *eng*zip -v
-mv *phone1*zip o*/t*/p*/phone1
