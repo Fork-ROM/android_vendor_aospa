@@ -317,7 +317,7 @@
       <axis tag="wght" stylevalue="550" />
     </font>
     <font weight="500" style="italic">OppoSans-En-Regular.ttf
-      <axis tag="ital" stylevalue="1" />
+1      <axis tag="ital" stylevalue="1" />
       <axis tag="wdth" stylevalue="100" />
       <axis tag="wght" stylevalue="620" />
     </font>
@@ -343,5 +343,19 @@
     </font>
   </family>
   <alias name="opposans-medium" to="opposans" weight="500" />
+
+    <family customizationType="new-named-family" name="samsungone">
+        <font weight="400" style="normal">SamsungOne.ttf</font>
+    </family>
+    <alias name="samsungone-semi-bold" to="samsungone" weight="600" />
+    <alias name="samsungone-bold" to="samsungone" weight="700" />
+    <alias name="times" to="samsungone" />
+    <alias name="times new roman" to="samsungone" />
+    <alias name="palatino" to="samsungone" />
+    <alias name="georgia" to="samsungone" />
+    <alias name="baskerville" to="samsungone" />
+    <alias name="goudy" to="samsungone" />
+    <alias name="fantasy" to="samsungone" />
+    <alias name="ITC Stone Serif" to="samsungone" />
 
 </fonts-modification>
