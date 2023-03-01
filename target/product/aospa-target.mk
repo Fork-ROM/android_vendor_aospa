@@ -54,7 +54,7 @@ $(call inherit-product, vendor/aospa/sepolicy/sepolicy.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 
-ifneq ($(TARGET_FLATTEN_APEX), true)
+ifneq )
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
 else
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_flatten_apex.mk)
@@ -95,3 +95,5 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # but also allow explicit overriding for testing and development.
 SYSTEM_OPTIMIZE_JAVA ?= true
 SYSTEMUI_OPTIMIZE_JAVA ?= true
+# Apex
+TARGET_FLATTEN_APEX :=  true
