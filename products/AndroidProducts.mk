@@ -23,12 +23,17 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/cheetah/aospa_cheetah.mk \
     $(LOCAL_DIR)/lisa/aospa_lisa.mk \
     $(LOCAL_DIR)/dubai/aospa_dubai.mk \
+    $(LOCAL_DIR)/juice/aospa_juice.mk \
     $(LOCAL_DIR)/lmi/aospa_lmi.mk \
     $(LOCAL_DIR)/mi439/aospa_mi439.mk \
     $(LOCAL_DIR)/miatoll/aospa_miatoll.mk \
     $(LOCAL_DIR)/mini5g/aospa_mini5g.mk \
     $(LOCAL_DIR)/oneplus5/aospa_oneplus5.mk \
     $(LOCAL_DIR)/oneplus5t/aospa_oneplus5t.mk \
+    $(LOCAL_DIR)/oneplus7/aospa_oneplus7.mk \
+    $(LOCAL_DIR)/oneplus7pro/aospa_oneplus7pro.mk \
+    $(LOCAL_DIR)/oneplus7t/aospa_oneplus7t.mk \
+    $(LOCAL_DIR)/oneplus7tpro/aospa_oneplus7tpro.mk \
     $(LOCAL_DIR)/oneplus9/aospa_oneplus9.mk \
     $(LOCAL_DIR)/oneplus9pro/aospa_oneplus9pro.mk \
     $(LOCAL_DIR)/oneplus9r/aospa_oneplus9r.mk \
@@ -50,12 +55,17 @@ COMMON_LUNCH_CHOICES += \
     aospa_cheetah-userdebug \
     aospa_lisa-userdebug \
     aospa_dubai-userdebug \
+    aospa_juice-userdebug \
     aospa_lmi-userdebug \
     aospa_mi439-userdebug \
     aospa_miatoll-userdebug \
     aospa_mini5g-userdebug \
     aospa_oneplus5-userdebug \
     aospa_oneplus5t-userdebug \
+    aospa_oneplus7-userdebug \
+    aospa_oneplus7pro-userdebug \
+    aospa_oneplus7t-userdebug \
+    aospa_oneplus7tpro-userdebug \
     aospa_oneplus9-userdebug \
     aospa_oneplus9pro-userdebug \
     aospa_oneplus9r-userdebug \
