@@ -12,28 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (aospa_lisa,$(TARGET_PRODUCT))
+ifeq (aospa_munch,$(TARGET_PRODUCT))
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from the custom device configuration.
-$(call inherit-product, device/xiaomi/lisa/device.mk)
+$(call inherit-product, device/xiaomi/munch/device.mk)
 
 # Inherit from the AOSPA configuration.
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
-PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := lisa
+PRODUCT_BRAND := POCO
+PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := 2109119DG
-PRODUCT_NAME := aospa_lisa
+PRODUCT_MODEL := POCO F4
+PRODUCT_NAME := aospa_munch
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=lisa_global
 
 # Boot animation resolution.
 TARGET_BOOT_ANIMATION_RES := 1080

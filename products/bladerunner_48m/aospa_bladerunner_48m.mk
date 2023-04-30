@@ -12,30 +12,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (aospa_lisa,$(TARGET_PRODUCT))
+ifeq (aospa_bladerunner_48m,$(TARGET_PRODUCT))
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from the custom device configuration.
-$(call inherit-product, device/xiaomi/lisa/device.mk)
+$(call inherit-product, device/realme/bladerunner_48m/device.mk)
 
 # Inherit from the AOSPA configuration.
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
-PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := lisa
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := 2109119DG
-PRODUCT_NAME := aospa_lisa
+PRODUCT_BRAND := realme
+PRODUCT_DEVICE := bladerunner_48m
+PRODUCT_MANUFACTURER := realme
+PRODUCT_MODEL := RMX2072
+PRODUCT_NAME := aospa_bladerunner_48m
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_SYSTEM_NAME := RMX2072
+PRODUCT_SYSTEM_DEVICE := RMX2072CN
+
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=lisa_global
-
-# Boot animation resolution.
-TARGET_BOOT_ANIMATION_RES := 1080
+    TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
+    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 endif

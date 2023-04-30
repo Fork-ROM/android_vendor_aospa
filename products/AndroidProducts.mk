@@ -19,15 +19,19 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/beryllium/aospa_beryllium.mk \
     $(LOCAL_DIR)/bitra/aospa_bitra.mk \
     $(LOCAL_DIR)/bladerunner/aospa_bladerunner.mk \
+    $(LOCAL_DIR)/bladerunner_48m/aospa_bladerunner_48m.mk \
     $(LOCAL_DIR)/bluejay/aospa_bluejay.mk \
     $(LOCAL_DIR)/cheetah/aospa_cheetah.mk \
     $(LOCAL_DIR)/lisa/aospa_lisa.mk \
+    $(LOCAL_DIR)/davinci/aospa_davinci.mk \
     $(LOCAL_DIR)/dubai/aospa_dubai.mk \
     $(LOCAL_DIR)/juice/aospa_juice.mk \
+    $(LOCAL_DIR)/lisa/aospa_lisa.mk \
     $(LOCAL_DIR)/lmi/aospa_lmi.mk \
     $(LOCAL_DIR)/mi439/aospa_mi439.mk \
     $(LOCAL_DIR)/miatoll/aospa_miatoll.mk \
     $(LOCAL_DIR)/mini5g/aospa_mini5g.mk \
+    $(LOCAL_DIR)/munch/aospa_munch.mk \
     $(LOCAL_DIR)/oneplus5/aospa_oneplus5.mk \
     $(LOCAL_DIR)/oneplus5t/aospa_oneplus5t.mk \
     $(LOCAL_DIR)/oneplus7/aospa_oneplus7.mk \
@@ -51,15 +55,19 @@ COMMON_LUNCH_CHOICES += \
     aospa_beryllium-userdebug \
     aospa_bitra-userdebug \
     aospa_bladerunner-userdebug \
+    aospa_bladerunner_48m-userdebug \
     aospa_bluejay-userdebug \
     aospa_cheetah-userdebug \
     aospa_lisa-userdebug \
+    aospa_davinci-userdebug \
     aospa_dubai-userdebug \
     aospa_juice-userdebug \
+    aospa_lisa-userdebug \
     aospa_lmi-userdebug \
     aospa_mi439-userdebug \
     aospa_miatoll-userdebug \
     aospa_mini5g-userdebug \
+    aospa_munch-userdebug \
     aospa_oneplus5-userdebug \
     aospa_oneplus5t-userdebug \
     aospa_oneplus7-userdebug \
