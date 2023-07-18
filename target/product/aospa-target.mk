@@ -41,10 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.charger.enable_suspend=1
 
-# curl
-PRODUCT_PACKAGES += \
-    curl
-
 # Dex2oat
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
@@ -65,10 +61,19 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0 \
     ro.sf.use_latest_hwc_vsync_period=0
 
+# Set default refresh rate threshold
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=60
+
 # Exfat FS
 PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
+
+# Extra tools
+PRODUCT_PACKAGES += \
+    curl \
+    vim
 
 # Fonts
 PRODUCT_COPY_FILES += \
@@ -199,6 +204,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 ifneq ($(TARGET_NO_TELEPHONY), true)
 PRODUCT_COPY_FILES += \
     vendor/aospa/target/config/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
+endif
+
+# StrictMode
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+# Disable extra StrictMode features on all non-engineering builds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.strictmode.disable=true
 endif
 
 # SEPolicy

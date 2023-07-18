@@ -30,6 +30,9 @@ PRODUCT_MANUFACTURER := Nothing
 PRODUCT_MODEL := A063
 PRODUCT_NAME := aospa_phone1
 
+# NT Camera
+$(call inherit-product, vendor/nothing/camera/nothing-camera.mk)
+
 # Bootanimation resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 

@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += \
     FontHarmonySansOverlay \
     FontInterOverlay \
     FontManropeOverlay \
+    FontOppoSansOverlay \
+    FontSamsungOneSourceOverlay \
     FontRobotoOverlay \
     FontUrbanistOverlay \
     IconPackCircularAndroidOverlay \
