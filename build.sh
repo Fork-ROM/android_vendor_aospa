@@ -259,6 +259,7 @@ elif [ "${KEY_MAPPINGS}" ]; then
         img_from_target_files \
             aospa-$AOSPA_VERSION-signed-target_files.zip \
             aospa-$AOSPA_VERSION-image.zip
+
 	IMG_SIZE=$(ls -nl "$OTA_FILE" | awk '{print $5}')
         IMG_SHA256=$(sha256sum "$OTA_FILE" | awk '{print $1}')
 	UTCSTAMP=$(grep 'ro.build.date.utc=' "$OUT"/system/build.prop | sed 's/^.*=//')
@@ -297,7 +298,14 @@ else
     checkExit
 
     cp -f $OUT/aospa_$DEVICE-ota.zip $OUT/aospa-$AOSPA_VERSION.zip
-    echo "OTA zip Complete: $OUT/aospa-$AOSPA_VERSION.zip"
+
+    IMG_SIZE=$(ls -nl "$OUT/aospa-$AOSPA_VERSION.zip" | awk '{print $5}')
+    IMG_SHA256=$(sha256sum "$OUT/aospa-$AOSPA_VERSION.zip" | awk '{print $1}')
+    UTCSTAMP=$(grep 'ro.build.date.utc=' "$OUT"/system/build.prop | sed 's/^.*=//')
+    echo "${CLR_BLD_GRN}OTA zip Complete:${CLR_RST} $OUT/aospa-$AOSPA_VERSION.zip"
+    echo "${CLR_BLD_GRN}SIZE:${CLR_RST} $IMG_SIZE bytes"
+    echo "${CLR_BLD_GRN}SHA256:${CLR_RST} $IMG_SHA256"
+    echo "${CLR_BLD_GRN}BUILD STAMP:${CLR_RST} $UTCSTAMP"
 fi
 echo -e ""
 
