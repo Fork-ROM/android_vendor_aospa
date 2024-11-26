@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.derpfest.support.preferences;
+package co.aospa.framework.preference;
 
 import android.content.Context;
 import androidx.preference.Preference;
